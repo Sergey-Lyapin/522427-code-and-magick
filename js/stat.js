@@ -70,7 +70,7 @@ window.renderStatistics = function (ctx, players, times) {
     var randomOpacity = Math.random().toFixed(2);
     if (players[i] === 'Вы') {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
-    }else {
+    } else {
       ctx.fillStyle = 'rgba(0, 77, 255, ' + randomOpacity + ')';
     }
     ctx.fillRect(CLOUD_X + START_GAP + (TEXT_WIDTH + BAR_GAP) * i, CLOUD_Y + RECT_GAP, BAR_WIDTH, -(barHeight * times[i]) / maxTime);
@@ -79,5 +79,5 @@ window.renderStatistics = function (ctx, players, times) {
     ctx.fillStyle = '#000';
     ctx.fillText(players[i], CLOUD_X + START_GAP + (TEXT_WIDTH + BAR_GAP) * i, CLOUD_Y + TEXT_GAP);
     ctx.fillText(Math.round(times[i]), CLOUD_X + START_GAP + (TEXT_WIDTH + BAR_GAP) * i, CLOUD_Y + (CLOUD_HEIGHT - (barHeight * times[i]) / maxTime) - TIME_GAP);
-  }  
+  }
 };
