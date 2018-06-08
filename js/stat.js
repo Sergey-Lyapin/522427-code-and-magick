@@ -50,10 +50,12 @@ var renderCloud = function (ctx, point1x, point1y, point2x, point2y, point3x, po
 
 var getMaxElement = function (arr) {
   var maxElement = arr[0];
+
   for (var i = 0; i < arr.length; i++) {
     if (arr[i] > maxElement) {
       maxElement = arr[i];
     }
+
   }
   return maxElement;
 };
@@ -84,7 +86,4 @@ window.renderStatistics = function (ctx, players, times) {
     ctx.fillText(players[i], CLOUD_X + START_GAP + (TEXT_WIDTH + BAR_GAP) * i, CLOUD_Y + TEXT_GAP);
     ctx.fillText(Math.round(times[i]), CLOUD_X + START_GAP + (TEXT_WIDTH + BAR_GAP) * i, CLOUD_Y + (CLOUD_HEIGHT - (barHeight * times[i]) / maxTime) - TIME_GAP);
   }
-
-
-
 };
