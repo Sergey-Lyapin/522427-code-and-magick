@@ -7,7 +7,6 @@ var CLOUD_X = 100;
 var CLOUD_Y = 10;
 var HEADER_X = 140;
 var HEADER_Y = 30;
-var GAP = 10;
 var START_GAP = 55;
 var TEXT_WIDTH = 40;
 var TEXT_GAP = 250;
@@ -29,7 +28,7 @@ var renderCloud = function (ctx, coordinates, color, strokeColor) {
 
   ctx.stroke();
   ctx.fill();
-}
+};
 
 
 var getMaxElement = function (arr) {
