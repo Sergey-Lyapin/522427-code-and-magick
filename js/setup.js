@@ -26,7 +26,7 @@ function generateWizards() {
     });
   }
   return wizards;
-};
+}
 
 function renderWizard(wizard) {
   var wizardElement = similarWizardTemplate.cloneNode(true);
@@ -34,7 +34,7 @@ function renderWizard(wizard) {
   wizardElement.querySelector('.wizard-coat').style.fill = wizard.coatColor;
   wizardElement.querySelector('.wizard-eyes').style.fill = wizard.eyesColor;
   return wizardElement;
-};
+}
 
 function renderWizards() {
   var similarWizards = generateWizards();
@@ -44,7 +44,7 @@ function renderWizards() {
     fragment.appendChild(renderWizard(similarWizards[i]));
   }
   similarListElement.appendChild(fragment);
-};
+}
 
 
 function getRandomElement(array) {
@@ -53,11 +53,10 @@ function getRandomElement(array) {
     var randomElement = array[randomIndex];
   }
   return randomElement;
-};
-
+}
 
 function openPopup() {
   userDialog.classList.remove('hidden');
   setupSimilarWizards.classList.remove('hidden');
-};
+}
 
