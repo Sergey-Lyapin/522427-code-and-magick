@@ -13,7 +13,7 @@ var setupSimilarWizards = document.querySelector('.setup-similar');
 var similarListElement = userDialog.querySelector('.setup-similar-list');
 var similarWizardTemplate = document.querySelector('#similar-wizard-template').content;
 
-openPopup();
+openThePopup();
 renderWizards();
 
 function generateWizards() {
@@ -63,7 +63,7 @@ function getRandomElement(array) {
   return randomElement;
 }
 
-function openPopup() {
+function openThePopup() {
   userDialog.classList.remove('hidden');
   setupSimilarWizards.classList.remove('hidden');
 }
@@ -105,7 +105,7 @@ var onFireballClick = function () {
 
 var onPopupEscPress = function (evt) {
 
-  if ((evt.keyCode === ESC_KEYCODE) && (setupUserName != document.activeElement)) {
+  if ((evt.keyCode === ESC_KEYCODE) && (setupUserName !== document.activeElement)) {
     closePopup();
   }
 };
