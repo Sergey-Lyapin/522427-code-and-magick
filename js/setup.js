@@ -108,15 +108,15 @@ var onPopupEscPress = function(evt) {
   if ((evt.keyCode === ESC_KEYCODE) && (setupUserName != document.activeElement)) {
     closePopup();
   }
-};
+}
 
-var onSetupCloseEnterPress = function (evt) {
+var onSetupCloseEnterPress = function(evt) {
   if (evt.keyCode === ENTER_KEYCODE) {
     closePopup();
   }
 }
 
-var onSetupOpenEnterPress = function (evt) {
+var onSetupOpenEnterPress = function(evt) {
   if (evt.keyCode === ENTER_KEYCODE) {
     openPopup();
   }
@@ -125,12 +125,12 @@ var onSetupOpenEnterPress = function (evt) {
 var openPopup = function() {
   setup.classList.remove('hidden');
   document.addEventListener('keydown', onPopupEscPress);
-};
+}
 
 var closePopup = function() {
   setup.classList.add('hidden');
   document.removeEventListener('keydown', onPopupEscPress);
-};
+}
 
 setupOpen.addEventListener('click', openPopup);
 setupClose.addEventListener('click', closePopup);
