@@ -84,6 +84,7 @@ var setupUserName = document.querySelector('.setup-user-name');
 var wizardCoat = setup.querySelector('.wizard-coat');
 var wizardEyes = setup.querySelector('.wizard-eyes');
 var wizardFireball = document.querySelector('.setup-fireball-wrap');
+var wizardFireballInput = wizardFireball.querySelector('.setup-fireball-wrap input');
 
 var onCoatClick = function () {
 
@@ -99,7 +100,9 @@ var onEyesClick = function () {
 
 var onFireballClick = function () {
 
-  wizardFireball.style.backgroundColor = getRandomElement(FIREBALL_COLOR);
+  var fireballColor = getRandomElement(FIREBALL_COLOR);
+  wizardFireball.style.backgroundColor = fireballColor;
+  wizardFireballInput.value = fireballColor;
 
 };
 
