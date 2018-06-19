@@ -63,7 +63,7 @@
   <div class="demo"></div>
 
   <div class="setup-open">
-    <img src="./img/user-1.jpg" class="setup-open-icon">
+    <img src="./img/user-1.jpg" class="setup-open-icon" tabindex="0">
   </div>
 </header>
 
@@ -71,7 +71,7 @@
   <form class="setup-wizard-form"
         method="post"
         enctype="multipart/form-data"
-        autocomplete="off">
+        autocomplete="off" action="https://js.dump.academy/code-and-magick">
 
     <div class="setup-title">
       <div class="setup-user">
@@ -81,12 +81,12 @@
         </div>
         <label>
           <input type="text" name="username"
-                 maxlength="25" required
+                 maxlength="25" minlength="2" required
                  class="setup-user-name" value="Синий Пендальф"/>
         </label>
       </div>
 
-      <span class="setup-close">&times;</span>
+      <span class="setup-close" tabindex="0">&times;</span>
     </div>
 
 
@@ -109,7 +109,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 86" class="setup-wizard">
             <g class="wizard">
               <use xlink:href="#wizard-coat" class="wizard-coat" style="fill: #6589a4"></use>
-              <use xlink:href="#wizard-head" class="wizard-head"></use>
+              <use xlink:href="#wizard-head" class="wizard-head" style="fill: black"></use>
               <use xlink:href="#wizard-eyes" class="wizard-eyes"></use>
               <use xlink:href="#wizard-hands" class="wizard-hands"></use>
             </g>
@@ -119,7 +119,7 @@
         <input type="hidden" name="eyes-color" value="black">
       </div>
 
-      <div class="setup-fireball-wrap">
+      <div class="setup-fireball-wrap" style="background-color: #ee4830">
         <div class="setup-fireball"></div>
         <input type="hidden" name="fireball-color" value="#ee4830">
       </div>
@@ -155,7 +155,7 @@
         <div class="setup-similar-list"><!--Список похожих персонажей--></div>
       </div>
 
-      <button class="button setup-submit">Сохранить</button>
+      <button type="submit" class="button setup-submit">Сохранить</button>
     </div>
   </form>
 </div>
