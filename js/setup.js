@@ -135,8 +135,8 @@ var openPopup = function () {
 var closePopup = function () {
   setup.classList.add('hidden');
   var setupPopup = document.querySelector('.setup');
-  setup.style.top = DIALOG_TOP;
-  setup.style.left = DIALOG_LEFT;
+  setupPopup.style.top = DIALOG_TOP;
+  setupPopup.style.left = DIALOG_LEFT;
   document.removeEventListener('keydown', onPopupEscPress);
 };
 
@@ -191,9 +191,9 @@ wizardFireball.addEventListener('click', onFireballClick);
       document.removeEventListener('mouseup', onMouseUp);
 
       if (dragged) {
-        var onClickPreventDefault = function (evt) {
-          evt.preventDefault();
-          dialogHandler.removeEventListener('click', onClickPreventDefault)
+        var onClickPreventDefault = function (draggedEvt) {
+          draggedEvt.preventDefault();
+          dialogHandler.removeEventListener('click', onClickPreventDefault);
         };
         dialogHandler.addEventListener('click', onClickPreventDefault);
       }
