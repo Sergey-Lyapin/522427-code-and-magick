@@ -30,19 +30,6 @@ var renderCloud = function (ctx, coordinates, color, strokeColor) {
   ctx.fill();
 };
 
-
-var getMaxElement = function (arr) {
-  var maxElement = arr[0];
-
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] > maxElement) {
-      maxElement = arr[i];
-    }
-
-  }
-  return maxElement;
-};
-
 window.renderStatistics = function (ctx, players, times) {
   renderCloud(ctx, coordinatesShadow, 'rgba(0, 0, 0, 0.3)', 'transparent');
   renderCloud(ctx, coordinatesCloud, '#fff', 'transparent');
