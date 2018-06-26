@@ -9,7 +9,7 @@
     }
 
     return randomElement;
-  }
+  };
 
   window.getMaxElement = function (arr) {
     var maxElement = arr[0];
