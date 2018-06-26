@@ -22,9 +22,9 @@ function generateWizards() {
   for (var i = 0; i < DATA_WIZARDS.numberOfWizards; i++) {
 
     wizards.push({
-      name: getRandomElement(DATA_WIZARDS.names) + getRandomElement(DATA_WIZARDS.surnames),
-      coatColor: getRandomElement(DATA_WIZARDS.coatColor),
-      eyesColor: getRandomElement(DATA_WIZARDS.eyesColor)
+      name: window.getRandomElement(DATA_WIZARDS.names) + window.getRandomElement(DATA_WIZARDS.surnames),
+      coatColor: window.getRandomElement(DATA_WIZARDS.coatColor),
+      eyesColor: window.getRandomElement(DATA_WIZARDS.eyesColor)
     });
 
   }

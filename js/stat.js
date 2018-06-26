@@ -39,7 +39,7 @@ window.renderStatistics = function (ctx, players, times) {
   ctx.textBaseline = 'hanging';
   ctx.fillText('Ура вы победили! Список результатов:', HEADER_X, HEADER_Y);
 
-  var maxTime = getMaxElement(times);
+  var maxTime = window.getMaxElement(times);
 
   for (var i = 0; i < players.length; i++) {
     var randomOpacity = Math.random().toFixed(2);

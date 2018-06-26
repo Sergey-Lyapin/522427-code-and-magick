@@ -20,19 +20,19 @@ var wizardFireballInput = wizardFireball.querySelector('.setup-fireball-wrap inp
 
 var onCoatClick = function () {
 
-  wizardCoat.style.fill = getRandomElement(COAT_COLORS);
+  wizardCoat.style.fill = window.getRandomElement(COAT_COLORS);
 
 };
 
 var onEyesClick = function () {
 
-  wizardEyes.style.fill = getRandomElement(EYES_COLORS);
+  wizardEyes.style.fill = window.getRandomElement(EYES_COLORS);
 
 };
 
 var onFireballClick = function () {
 
-  var fireballColor = getRandomElement(FIREBALL_COLOR);
+  var fireballColor = window.getRandomElement(FIREBALL_COLOR);
   wizardFireball.style.backgroundColor = fireballColor;
   wizardFireballInput.value = fireballColor;
 

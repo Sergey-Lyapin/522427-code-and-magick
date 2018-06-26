@@ -1,4 +1,7 @@
-function getRandomElement(array) {
+'use strict';
+
+(function(){
+window.getRandomElement = function (array) {
 
   for (var i = 0; i < array.length; i++) {
     var randomIndex = Math.floor(Math.random() * array.length);
@@ -8,7 +11,7 @@ function getRandomElement(array) {
   return randomElement;
 }
 
-var getMaxElement = function (arr) {
+window.getMaxElement = function (arr) {
   var maxElement = arr[0];
 
   for (var i = 0; i < arr.length; i++) {
@@ -19,3 +22,5 @@ var getMaxElement = function (arr) {
   }
   return maxElement;
 };
+  
+})();
