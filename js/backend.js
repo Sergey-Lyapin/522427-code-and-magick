@@ -1,3 +1,6 @@
+'use strict';
+
+
 window.backend = (function () {
 
   return {

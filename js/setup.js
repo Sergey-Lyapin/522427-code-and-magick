@@ -50,10 +50,10 @@
   }
 
   form.addEventListener('submit', function (evt) {
-    window.backend.save(new FormData(form), function (response) {
+    window.backend.save(new FormData(form), function () {
       userDialog.classList.add('hidden');
     }, function (errorMessage) {
-      console.log(errorMessage);
+      alert(errorMessage);
     });
     evt.preventDefault();
   });
