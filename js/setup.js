@@ -61,7 +61,7 @@
       node.style.fontSize = '35px';
 
       node.textContent = errorMessage;
-      document.body.insertAdjacentElement('afterbegin', node);;
+      document.body.insertAdjacentElement('afterbegin', node);
     });
     evt.preventDefault();
   });
