@@ -28,7 +28,7 @@
     similarListElement.appendChild(fragment);
 
     userDialog.querySelector('.setup-similar').classList.remove('hidden');
-  };
+  }
 
   function errorHandler(errorMessage) {
     var node = document.createElement('div');
@@ -40,7 +40,7 @@
 
     node.textContent = errorMessage;
     document.body.insertAdjacentElement('afterbegin', node);
-  };
+  }
 
   window.backend.load(successHandler, errorHandler);
 

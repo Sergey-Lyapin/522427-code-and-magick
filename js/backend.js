@@ -21,7 +21,7 @@ window.backend = (function () {
       });
 
       xhr.addEventListener('error', function () {
-        onError('Произошла ошибка, попробуйте снова');
+        onError('Произошла ошибка загрузки, попробуйте снова');
       });
 
       xhr.addEventListener('timeout', function () {
@@ -44,7 +44,7 @@ window.backend = (function () {
       });
 
       xhr.addEventListener('error', function () {
-        onError(xhr.status + ', ' + xhr.statusText);
+        onError('Произошла ошибка отправки формы, попробуйте еще раз');
       });
 
       xhr.open('POST', URL);
